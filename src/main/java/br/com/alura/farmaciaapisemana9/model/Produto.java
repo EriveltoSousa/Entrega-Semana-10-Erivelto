@@ -1,5 +1,6 @@
 package br.com.alura.farmaciaapisemana9.model;
 
+import br.com.alura.farmaciaapisemana9.DTO.DadoasAtualizacaoDTO;
 import br.com.alura.farmaciaapisemana9.DTO.DadosCadastroDTO;
 import jakarta.persistence.*;
 import lombok.EqualsAndHashCode;
@@ -43,5 +44,14 @@ public class Produto {
     }
 
     public Object getId() {
+    }
+
+    public void atualizar(DadoasAtualizacaoDTO produtoDTO) {
+        if (produtoDTO.descricaoProduto() != null) {
+            this.descricao = produtoDTO.descricaoProduto();
+        }
+        if (produtoDTO.precoProduto() > 0 ){
+            this.preco = produtoDTO.precoProduto();
+        }
     }
 }
