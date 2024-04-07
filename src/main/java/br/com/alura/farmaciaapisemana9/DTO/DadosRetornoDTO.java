@@ -1,16 +1,13 @@
 package br.com.alura.farmaciaapisemana9.DTO;
 
 import br.com.alura.farmaciaapisemana9.model.Produto;
+import jakarta.validation.constraints.NotBlank;
 
-public record DadosRetornoDTO(String nomeFabricante, String nomeProduto, String descricaoProduto, double precoProduto){
-
-    public DadosRetornoDTO(Produto produto){
-        this.(produto.getFabricante()
-               produto.getNome(),
-               produto.getdescricao(),
-               produto.getpreco());
-
-
+public class DadosRetornoDTO{
+    public DadosRetornoDTO(Object nome1, Object descricao, Object preco, Object produtoPreco) {
     }
 
+    public DadosRetornoDTO(Produto produto) {
     }
+}
+

@@ -7,6 +7,8 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.util.Map;
+
 @Table(name ="produtos")
 @Entity(name ="produtos")
 @Getter
@@ -30,7 +32,7 @@ public class Produto {
 
     }
 
-    public Object getFabricante() {
+    public void getFabricante() {
     }
 
     public void getNome() {
@@ -43,7 +45,8 @@ public class Produto {
 
     }
 
-    public Object getId() {
+    public Map<String, ?> getId() {
+        return null;
     }
 
     public void atualizar(DadoasAtualizacaoDTO produtoDTO) {
